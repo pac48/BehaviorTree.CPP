@@ -38,6 +38,7 @@ struct TreeNodeManifest
   std::string registration_ID;
   PortsList ports;
   KeyValueVector metadata;
+  std::string description;
 };
 
 using PortsRemapping = std::unordered_map<std::string, std::string>;

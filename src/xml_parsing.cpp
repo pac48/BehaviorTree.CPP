@@ -1033,6 +1033,13 @@ void addNodeModelToXML(const TreeNodeManifest& model,
     element->InsertEndChild(metadata_root);
   }
 
+ if (!model.description.empty())
+  {
+      auto description_element = doc.NewElement("description");
+      description_element->SetAttribute("value", model.description.c_str());
+      element->InsertEndChild(description_element);
+    }
+
   model_root->InsertEndChild(element);
 }
 
